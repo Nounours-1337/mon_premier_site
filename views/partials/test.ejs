@@ -1,0 +1,14 @@
+
+<ul>
+<% for (const game of gamesList){%>
+    <li>
+        <a href="/game/<%=game.name%>"><%=game.title %></a>
+    </li>
+<% } %>
+</ul>
+
+
+<% if (locals.game && game.cssFile !== null) { %>
+    <link rel="stylesheet" href="/css/<%= game.cssFile %>">
+<% } %>
+

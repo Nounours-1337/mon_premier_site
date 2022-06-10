@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<main>
+  <% if(locals.game) { %>
+
+    <% if(game.cssFile) { %>
+      <link rel="stylesheet" href="/css/<%= game.cssFile %>">
+    <% } %>
+
+    <%- include(game.name) %>
+
+    <script src="/js/<%= game.jsFile %>"></script>
+    
+  <% } else { %>
+    <h3>Aucun jeu n'est sélectionné</h3>
+  <% } %>
+
+</main>
+
+<%- include("partials/footer.ejs") %>
