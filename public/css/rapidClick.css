@@ -1,25 +1,23 @@
 .container {
-    height: 100vh;
-    display: flex;
+    height: 100%;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
 }
 
-.header {
+.title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    line-height: 7.5rem;
+    line-height: 5rem;
 }
 
-.header h1 {
+.title span {
     font-size: 5rem;
     font-weight: bold;
 }
 
-.header p {
+.title p {
     font-size: 2rem;
 }
 
@@ -30,7 +28,7 @@
 #jeu {
     position: relative;
     width: 70rem;
-    height: 70rem;
+    height: 65rem;
     border: 1px solid red;
 }
 
@@ -58,9 +56,4 @@
     position: absolute;
     background-color: rgb(0, 0, 0);
     visibility: hidden;
-}
-
-.footer {
-    border: 1px solid red;
-
 }

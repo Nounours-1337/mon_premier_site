@@ -8,11 +8,9 @@ app.locals.title;
 app.locals.gamesList = gamesJson;
 
 app.set("view engine", "ejs");
-
 app.set("views', './views");
 
 app.use(express.static("./public"));
-
 
 
 app.get("/", (req, res) => {
@@ -31,18 +29,30 @@ app.get("/jeux", (req, res, next) => {
 
 app.get("/jeux/:games", (req, res, next) => {
     const urlGameName = req.params.games;
-
     const currentGame = gamesJson.find((gameObject) => gameObject.name === urlGameName);
     
-    res.locals.title = "Mon jeu";
-    res.locals.pageTitle = currentGame.title;
-
     if (!currentGame) {
         return next();
     }
+    else {
+        res.locals.title = "Mon jeu";
+        res.locals.pageTitle = currentGame.title;
+        res.render("games.ejs", { game: currentGame });
+    }
+});
 
-    res.render(currentGame.name);
+app.get("/jeux/en_construction", (req, res, next) => {
+    res.locals.title = "Jeux";
+    res.locals.pageTitle = "en construction";
 
+    res.render("construction.ejs");
+});
+
+app.get("/CV", (req, res, next) => {
+    res.locals.title = "CV";
+    res.locals.pageTitle = "évolutif";
+
+    res.render("CV.ejs");
 });
 
 app.use((req, res) => {

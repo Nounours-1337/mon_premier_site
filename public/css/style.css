@@ -4,12 +4,14 @@
     --couleur-de-fond: grey;
     --couleur-blanc: #fff;
     --couleur-noire: #000;
+    --couleur-rose: #f0f;
     --couleur-nav: #00bdff, #008bff;
     --couleur-nav-pages: #bb0130;
     --couleur-light: lightgrey;
     --clr: #222327;
-    --lgIcon: 5rem;
-    --spaces: 1692px / 5;
+    --lgIcon: 3rem;
+    --spaces: 1680px / 5;
+    --HauteruMain: 78rem;
 }
 
 
@@ -40,18 +42,16 @@ body {
 
 /* en-tete et navigation */
 .en-tete {
-    min-height: 15vh;
+    position: relative;
+    padding-top: 1.5rem;
     width: 100%;
     border-radius: 2rem;
 }
 
 .nav {
-    min-height: 15rem;
-    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 2.5rem;
 }
 
 .nav-lists {
@@ -65,8 +65,8 @@ body {
 .nav-list {
     position: relative;
     list-style: none;
-    width: 10rem;
-    height: 10rem;
+    width: 7rem;
+    height: 7rem;
     z-index: 1;
 }
 
@@ -85,20 +85,19 @@ body {
 .icon {
     position: relative;
     display: block;
-    line-height: 10rem;
-    font-size: var(--lgIcon);
+    width: var(--lgIcon);
     text-align: center;
     transition: 0.5s;
     color: var(--clr);
 }
 
 li.active .icon {
-    transform: translateY(-4.3rem);
+    transform: translateY(-3.5rem);
 }
 
 .text {
     position: absolute;
-    color: var(--clr);
+    color: var(--couleur-rose);
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 0.05rem;
@@ -110,15 +109,15 @@ li.active .icon {
 li.active .text {
     opacity: 1;
     transform: translateY(2rem);
-    text-shadow: 0 0 0.2rem #f0f;
+    text-shadow: 0 0 0.1rem var(--couleur-noire);
 }
 
 .indicator {
     box-sizing: border-box;
     position: absolute;
-    top: -2.5rem;
-    width: 10rem;
-    height: 10rem;
+    top: -2rem;
+    width: 7rem;
+    height: 7rem;
     background: #29fd53;
     border-radius: 50%;
     border: 1rem solid var(--clr);
@@ -173,9 +172,8 @@ li:nth-child(5).active ~ .indicator {
 
 /* main */
 .principale {
-    padding: 2rem 0;
     width: 100%;
-    min-height: 15rem;
+    min-height: 80rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,11 +197,18 @@ li:nth-child(5).active ~ .indicator {
 .contain {
     display: flex;
     width: 90%;
-    height: 65rem;
+    min-height: var(--HauteruMain);
     background-color: var(--couleur-light);
     justify-content: space-around;
     align-items: center;
     border-radius: 2rem;
+}
+
+.en_construction {
+    width: 100%;
+    height: var(--HauteruMain);
+    background: url(/images/en-construction.png) no-repeat center center fixed;
+    background-size: contain;
 }
 
 
@@ -222,9 +227,7 @@ main.erreur {
 /* ##### Pied de page ##### */
 .pied-de-page {
     width: 100%;
-    position: sticky;
-    bottom: 0rem;
-    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
 }
 
 .footer-items {
