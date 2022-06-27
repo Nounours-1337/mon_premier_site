@@ -1,0 +1,80 @@
+[
+    {
+      "name": "fourchette",
+      "title": "Jeu de la fourchette",
+      "cssFile": null,
+      "jsFile": "fourchette.js"
+    },
+    {
+      "name": "diceRoller",
+      "title": "Dice Roller",
+      "cssFile": "diceRoller.css",
+      "jsFile": "diceRoller.js"
+    },
+    {
+      "name": "rpg",
+      "title": "Jeu RPG",
+      "cssFile": "rpg.css",
+      "jsFile": "rpg.js"
+    },
+    {
+      "name": "CalculeMentale",
+      "title": "Calcule Mentale",
+      "cssFile": "CalculeMentale.css",
+      "jsFile": "CalculeMentale.js"
+    },
+    {
+      "name": "CarreRouge",
+      "title": "Carré Rouge",
+      "cssFile": "CarreRouge.css",
+      "jsFile": "CarreRouge.js"
+    },
+    {
+      "name": "CasseBrique",
+      "title": "Casse Brique",
+      "cssFile": "CasseBrique.css",
+      "jsFile": "CasseBrique.js"
+    },
+    {
+      "name": "LePendu",
+      "title": "Le Pendu",
+      "cssFile": "LePendu.css",
+      "jsFile": "LePendu.js"
+    },
+    {
+      "name": "Lentarteur",
+      "title": "L'entarteur",
+      "cssFile": "Lentarteur.css",
+      "jsFile": "Lentarteur.js"
+    },
+    {
+      "name": "Pong",
+      "title": "Pong",
+      "cssFile": "Pong.css",
+      "jsFile": "Pong.js"
+    },
+    {
+      "name": "RapidClick",
+      "title": "Rapid' Click",
+      "cssFile": "RapidClick.css",
+      "jsFile": "RapidClick.js"
+    },
+    {
+      "name": "Scrabble",
+      "title": "Rapid' Click",
+      "cssFile": "Scrabble.css",
+      "jsFile": "Scrabble.js"
+    },
+    {
+      "name": "ShiFuMi",
+      "title": "Rapid' Click",
+      "cssFile": "ShiFuMi.css",
+      "jsFile": "ShiFuMi.js"
+    },
+    {
+      "name": "Snake",
+      "title": "Rapid' Click",
+      "cssFile": "Snake.css",
+      "jsFile": "Snake.js"
+    }
+]

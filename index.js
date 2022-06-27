@@ -1,64 +1,30 @@
-const express = require("express");
-const gamesJson   = require("./games.json");
+require("dotenv").config();
 
-const app     = express();
-const PORT    = 3000;
+const express = require("express");
+// const session = require("express-session");
+const app = express();
+const router = require("./app/router.js");
 
 app.locals.title;
+const gamesJson   = require("./data/games.json");
 app.locals.gamesList = gamesJson;
 
+
 app.set("view engine", "ejs");
-app.set("views', './views");
+app.set("views", "./app/views");
 
 app.use(express.static("./public"));
 
+// app.use(express.urlencoded({ extended: true }));
 
-app.get("/", (req, res) => {
-    res.locals.title = "Accueil";
-    res.locals.pageTitle = "mon site";
-    
-    res.render("index.ejs")
-});
-
-app.get("/jeux", (req, res, next) => {
-    res.locals.title = "Accueil des jeux";
-    res.locals.pageTitle = "Choisissez un jeux";
-
-    res.render("Accueil_des_jeux.ejs");
-});
-
-app.get("/jeux/:games", (req, res, next) => {
-    const urlGameName = req.params.games;
-    const currentGame = gamesJson.find((gameObject) => gameObject.name === urlGameName);
-    
-    if (!currentGame) {
-        return next();
-    }
-    else {
-        res.locals.title = "Mon jeu";
-        res.locals.pageTitle = currentGame.title;
-        res.render("games.ejs", { game: currentGame });
-    }
-});
-
-app.get("/jeux/en_construction", (req, res, next) => {
-    res.locals.title = "Jeux";
-    res.locals.pageTitle = "en construction";
-
-    res.render("construction.ejs");
-});
-
-app.get("/CV", (req, res, next) => {
-    res.locals.title = "CV";
-    res.locals.pageTitle = "évolutif";
-
-    res.render("CV.ejs");
-});
+app.use(router);
 
 app.use((req, res) => {
     res.status(404).render("404.ejs");
 });
 
-app.listen(PORT, () => {
-  console.log(`Serveur en écoute sur http://localhost:${PORT}`);
+// const port = process.env.PORT || 3000;
+const port = 3000;
+app.listen(port, () => {
+  console.log(`Listening at http://localhost:${port}`);
 });
