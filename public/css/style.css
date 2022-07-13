@@ -10,7 +10,7 @@
     --couleur-light: lightgrey;
     --clr: #222327;
     --lgIcon: 3rem;
-    --spaces: 1680px / 5;
+    --spaces: 1690px / 5;
     --HauteruMain: 78rem;
 }
 
@@ -28,10 +28,10 @@ body {
 }
 
 .contenu {
-    min-height: 95vh;
     background-color: var(--clr);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
@@ -65,8 +65,8 @@ body {
 .nav-list {
     position: relative;
     list-style: none;
-    width: 7rem;
-    height: 7rem;
+    width: 5rem;
+    height: 5rem;
     z-index: 1;
 }
 
@@ -92,7 +92,7 @@ body {
 }
 
 li.active .icon {
-    transform: translateY(-3.5rem);
+    transform: translateY(-2.5rem);
 }
 
 .text {
@@ -108,19 +108,19 @@ li.active .icon {
 
 li.active .text {
     opacity: 1;
-    transform: translateY(2rem);
+    transform: translateY(1rem);
     text-shadow: 0 0 0.1rem var(--couleur-noire);
 }
 
 .indicator {
     box-sizing: border-box;
     position: absolute;
-    top: -2rem;
-    width: 7rem;
-    height: 7rem;
+    top: -1rem;
+    width: 5rem;
+    height: 5rem;
     background: #29fd53;
     border-radius: 50%;
-    border: 1rem solid var(--clr);
+    border: 0.5rem solid var(--clr);
     transition: 0.5s;
 }
 
@@ -128,7 +128,7 @@ li.active .text {
     content: '';
     position: absolute;
     top: 50%;
-    left: -2.7rem;
+    left: -2.1rem;
     width: 2rem;
     height: 2rem;
     background: var(--couleur-light);
@@ -140,7 +140,7 @@ li.active .text {
     content: '';
     position: absolute;
     top: 50%;
-    right: -2.7rem;
+    right: -2.1rem;
     width: 2rem;
     height: 2rem;
     background: var(--couleur-light);
@@ -173,7 +173,6 @@ li:nth-child(5).active ~ .indicator {
 /* main */
 .principale {
     width: 100%;
-    min-height: 80rem;
     display: flex;
     justify-content: center;
     align-items: center;
