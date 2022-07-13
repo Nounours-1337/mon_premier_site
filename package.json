@@ -1,9 +1,4 @@
 {
-  "dependencies": {
-    "dotenv": "^16.0.1",
-    "ejs": "^3.1.8",
-    "express": "^4.18.1"
-  },
   "name": "mon_premier_site",
   "description": "",
   "version": "1.0.0",
@@ -22,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/Nounours-1337/mon_premier_site/issues"
   },
-  "homepage": "https://github.com/Nounours-1337/mon_premier_site#readme"
+  "homepage": "https://github.com/Nounours-1337/mon_premier_site#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "email-validator": "^2.0.4",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "pg": "^8.7.3",
+    "sequelize": "^6.21.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.19.0",
+    "nodemon": "^2.0.19"
+  }
 }
