@@ -1,0 +1,51 @@
+.main-CV {
+  display: flex;
+}
+
+.nav-CV {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+.photo-de-profil {
+  width: 10rem;
+  border-radius: 50%;
+}
+
+.cv-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cv-info-lists {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cv-info-list {
+}
+
+.cv-info-click {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.cv-info-icon {
+
+}
+
+.cv-info-name {
+
+}
+
+.cv-info-text {
+  color: var(--couleur-blanc);
+  font-size: 1.2rem;
+}

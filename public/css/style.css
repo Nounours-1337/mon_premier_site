@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
 :root {
-    --couleur-de-fond: grey;
+    --couleur-de-fond: #485fc7;
     --couleur-blanc: #fff;
     --couleur-noire: #000;
-    --couleur-rose: #f0f;
+    --couleur-nav-text: #ff33ff;
     --couleur-nav: #00bdff, #008bff;
     --couleur-nav-pages: #bb0130;
-    --couleur-light: lightgrey;
-    --clr: #222327;
+    --couleur-indicator: #00d1b2;
+    --couleur-light: #00d1b2;
     --lgIcon: 3rem;
     --spaces: 1690px / 5;
     --HauteruMain: 78rem;
@@ -28,14 +28,12 @@ body {
 }
 
 .contenu {
-    background-color: var(--clr);
+    background-color: var(--couleur-de-fond);
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
     justify-content: space-between;
     align-items: center;
-    border-radius: 20px;
-    box-shadow: 1rem 1rem 3rem #000;
 }
 
 
@@ -88,7 +86,7 @@ body {
     width: var(--lgIcon);
     text-align: center;
     transition: 0.5s;
-    color: var(--clr);
+    color: var(--couleur-de-fond);
 }
 
 li.active .icon {
@@ -97,7 +95,7 @@ li.active .icon {
 
 .text {
     position: absolute;
-    color: var(--couleur-rose);
+    color: var(--couleur-nav-text);
     font-weight: 400;
     font-size: 2rem;
     letter-spacing: 0.05rem;
@@ -118,9 +116,9 @@ li.active .text {
     top: -1rem;
     width: 5rem;
     height: 5rem;
-    background: #29fd53;
+    background: var(--couleur-indicator);
     border-radius: 50%;
-    border: 0.5rem solid var(--clr);
+    border: 0.5rem solid var(--couleur-de-fond);
     transition: 0.5s;
 }
 
@@ -133,7 +131,7 @@ li.active .text {
     height: 2rem;
     background: var(--couleur-light);
     border-top-right-radius: 100%;
-    box-shadow: 1px -10px 00 var(--clr);
+    box-shadow: 1px -10px 00 var(--couleur-de-fond);
 }
 
 .indicator::after {
@@ -145,7 +143,7 @@ li.active .text {
     height: 2rem;
     background: var(--couleur-light);
     border-top-left-radius: 100%;
-    box-shadow: -1px -10px 00 var(--clr);
+    box-shadow: -1px -10px 00 var(--couleur-de-fond);
 }
 
 li:nth-child(1).active ~ .indicator {
@@ -179,18 +177,27 @@ li:nth-child(5).active ~ .indicator {
     box-sizing: border-box;
 }
 
-.container {
+.containeur {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.container a {
+.containeur a {
+    padding: 0.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 2rem;
-    color: #006cc4;
     text-decoration: none;
     text-shadow: 0 0 0.2rem #f0f;
+}
+
+.containeur a:hover {
+    color: var(--couleur-blanc);
+    border-radius: 2rem;
+    background-color: var(--couleur-de-fond);
 }
 
 .contain {

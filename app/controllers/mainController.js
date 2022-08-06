@@ -1,21 +1,21 @@
 const gamesJson = require("../../data/games.json");
 
 const mainController = {
-  renderHomePage(req, res) {
+  renderHomePage(_, res) {
     res.locals.title = "Accueil";
     res.locals.pageTitle = "mon site";
 
     res.render("index");
   },
 
-  renderGameHomePage(req, res) {
+  renderGameHomePage(_, res) {
     res.locals.title = "Jeux";
     res.locals.pageTitle = "Choisissez un jeux";
 
     res.render("Accueil_des_jeux.ejs");
   },
 
-  renderConstructionPage(req, res) {
+  renderConstructionPage(_, res) {
     res.locals.title = "Jeux";
     res.locals.pageTitle = "en construction";
 
@@ -42,7 +42,7 @@ const mainController = {
     return mainController.renderConstructionPage;
   },
 
-  renderCVPage(req, res) {
+  renderCVPage(_, res) {
     res.locals.title = "CV";
     res.locals.pageTitle = "évolutif";
 

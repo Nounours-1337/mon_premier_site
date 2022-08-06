@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-:root {
-    --couleur-de-fond: grey;
-    --couleur-blanc: #fff;
-    --couleur-noire: #000;
-    --couleur-nav: #00bdff, #008bff;
-    --couleur-nav-pages: #bb0130;
-    --couleur-light: lightgrey;
-    --clr: #222327;
-}
 
 /* ##### contenu principale (main) ##### */
 .liste-jeux {
