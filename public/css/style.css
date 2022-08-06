@@ -68,7 +68,7 @@ body {
     z-index: 1;
 }
 
-.nav-list a {
+.nav-list > a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ body {
     color: var(--couleur-de-fond);
 }
 
-li.active .icon {
+li.active > .icon {
     transform: translateY(-2.5rem);
 }
 
@@ -104,7 +104,7 @@ li.active .icon {
     transform: translateY(2rem);
 }
 
-li.active .text {
+li.active > .text {
     opacity: 1;
     transform: translateY(1rem);
     text-shadow: 0 0 0.1rem var(--couleur-noire);
@@ -184,7 +184,7 @@ li:nth-child(5).active ~ .indicator {
     align-items: center;
 }
 
-.containeur a {
+.containeur > a {
     padding: 0.8rem;
     display: flex;
     justify-content: center;
@@ -194,7 +194,7 @@ li:nth-child(5).active ~ .indicator {
     text-shadow: 0 0 0.2rem #f0f;
 }
 
-.containeur a:hover {
+.containeur > a:hover {
     color: var(--couleur-blanc);
     border-radius: 2rem;
     background-color: var(--couleur-de-fond);

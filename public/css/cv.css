@@ -35,14 +35,16 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .cv-info-icon {
-
+  color: var(--couleur-noire);
 }
 
 .cv-info-name {
-
+  font-size: 1.2rem;
 }
 
 .cv-info-text {
